@@ -32,7 +32,6 @@ type ContextType = {
 
 const context = createContext<ContextType | undefined>(undefined);
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type TaskFormState = Record<string, any>;
 
 type FormState = {
