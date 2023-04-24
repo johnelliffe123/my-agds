@@ -3,9 +3,11 @@ import Head from 'next/head';
 import { Core } from '@ag.ds-next/react/core';
 import { theme } from '@ag.ds-next/react/ag-branding';
 import { LinkComponent } from '../components/LinkComponent';
+import { FormRegisterPetContext } from '../components/FormRegisterPetContext';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
+		<FormRegisterPetContext>
 		<Core theme={theme} linkComponent={LinkComponent}>
 			<Head>
 				<meta
@@ -19,7 +21,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 			</Head>
 			<Component {...pageProps} />
 		</Core>
+		</FormRegisterPetContext>
 	);
 }
 
 export default MyApp;
+

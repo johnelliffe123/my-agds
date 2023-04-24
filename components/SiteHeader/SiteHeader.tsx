@@ -13,8 +13,8 @@ export const SiteHeader = () => {
 			<Header
 				background="bodyAlt"
 				logo={<Logo />}
-				heading="Agriculture Design System"
-				subline="Design System for the Export Service"
+				heading="John's practice site"
+				subline="Based on the AGDS starter kit"
 				badgeLabel="Beta"
 			/>
 			<MainNav

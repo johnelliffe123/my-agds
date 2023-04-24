@@ -1,3 +1,13 @@
+# my-agds
+A next.js web site based on the Agriculture Design System
+
+Starting point:
+git clone https://github.com/steelthreads/agds-starter-kit.git my-agds
+
+
+
+
+
 # AG Design System Starter Kit
 
 This is a simple starter kit built using the AG Design System, NextJS and Typescript. It is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

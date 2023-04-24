@@ -17,7 +17,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
 				flexDirection="column"
 				fontFamily="body"
 				palette="light"
-				minHeight="100vh"
+				minHeight="80vh"
 			>
 				<SiteHeader />
 				<Box as="main" id="main-content" flexGrow={1}>
