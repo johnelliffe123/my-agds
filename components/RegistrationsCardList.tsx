@@ -6,9 +6,9 @@ import { Columns } from '@ag.ds-next/react/columns';
 
 const items = [
 	{
-		title: 'Register your car',
-		slug: '/not-found',
-		description: 'Register for a parking permit.',
+		title: 'Find a restaurant',
+		slug: '/services/registrations/restaurant',
+		description: 'Find a restaurant description.',
 	},
 	{
 		title: 'Register for a parking permit',

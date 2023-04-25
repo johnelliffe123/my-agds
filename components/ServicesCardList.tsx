@@ -6,10 +6,9 @@ import { Columns } from '@ag.ds-next/react/columns';
 
 const items = [
 	{
-		title: 'Payments',
-		slug: '/not-found',
-		description:
-			'Paperless payments can be made at a time and place that suits you.',
+		title: 'Find a restaurant',
+		slug: '/services/consumer/restaurant',
+		description: 'Find a restaurant description.',
 	},
 	{
 		title: 'Registrations',
