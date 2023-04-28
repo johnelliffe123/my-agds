@@ -1,5 +1,5 @@
-import { Options, Select } from '@ag.ds-next/react/select';
 import { ChangeEvent } from 'react';
+import { Options, Select } from '@ag.ds-next/react/select';
 
 export const CuisineSelection = ({
 	cuisineList,
@@ -8,6 +8,7 @@ export const CuisineSelection = ({
 	cuisineList: Options;
 	setSelectedCuisine: Function;
 }) => {
+
 	function handleSelection(event: ChangeEvent<HTMLSelectElement>): void {
 		setSelectedCuisine(event.target.value);
 	}

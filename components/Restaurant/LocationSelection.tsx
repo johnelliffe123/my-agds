@@ -1,5 +1,5 @@
-import { Options, Select } from '@ag.ds-next/react/select';
 import { ChangeEvent } from 'react';
+import { Options, Select } from '@ag.ds-next/react/select';
 
 export const LocationSelection = ({
 	locationList,
@@ -8,6 +8,7 @@ export const LocationSelection = ({
 	locationList: Options;
 	setSelectedLocation: Function;
 }) => {
+	
 	function handleSelection(event: ChangeEvent<HTMLSelectElement>): void {
 		setSelectedLocation(event.target.value);
 	}

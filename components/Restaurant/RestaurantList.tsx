@@ -4,32 +4,57 @@ import {
 	TableBody,
 	TableCell,
 	TableHead,
+	TableHeader,
 	TableWrapper,
 } from '@ag.ds-next/react/table';
 import { IRestaurant } from '../../pages/api/consumer/restaurant';
 
-export const RestaurantList = ({ cuisine, location }: { cuisine: string | undefined, location: string | undefined }) => {
+export const RestaurantList = ({
+	cuisine,
+	location,
+}: {
+	cuisine: string | undefined;
+	location: string | undefined;
+}) => {
 	const [loading, setLoading] = useState<boolean>(false);
 	const [restaurantList, setRestaurantList] = useState<IRestaurant[]>([]);
 
+	function toDefinedString(
+		arg0: string | string[] | undefined
+	): string {
+		return Array.isArray(arg0) ? arg0[0] : arg0 ? arg0 : '';
+	}
 	// useSWR
 
 	useEffect(() => {
-		setLoading(true);
-		fetch('/api/consumer/restaurant?cuisine='+cuisine+'&location='+location)
-			.then((res) => res.json())
-			.then((data) => {
-				setRestaurantList(data);
-				setLoading(false);
-			});
+		if (!cuisine && !location) {
+			setRestaurantList([]);
+			return;
+		}
+			setLoading(true);
+			fetch(
+				'/api/consumer/restaurant?cuisine=' +
+					toDefinedString(cuisine) +
+					'&location=' +
+					toDefinedString(location)
+			)
+				.then((res) => res.json())
+				.then((data) => {
+					setRestaurantList(data);
+					setLoading(false);
+				});
+		
 	}, [cuisine, location]);
 
-	// probably want to convert to table
 	return (
 		<TableWrapper>
-			<Table>
+			<Table striped>
 				<TableHead>
-					<tr></tr>
+					<tr>
+						<TableHeader>Name</TableHeader>
+						<TableHeader>Cuisine</TableHeader>
+						<TableHeader>Location</TableHeader>
+					</tr>
 				</TableHead>
 				<TableBody>
 					{restaurantList.map((r) => (

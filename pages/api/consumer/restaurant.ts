@@ -53,8 +53,7 @@ export default async function handler(
 	req: NextApiRequest,
 	res: NextApiResponse<Data>
 ) {
-	const { cuisine, location } = req.query;
-	//res.status(200).json({ name: 'John Doexxx' });
+	const { cuisine, location } = req.query;	//res.status(200).json({ name: 'John Doexxx' });
 
 	res
 		.status(200)
