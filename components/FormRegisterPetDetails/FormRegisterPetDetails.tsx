@@ -212,7 +212,7 @@ export const FormRegisterPetDetails = () => {
 	};
 
 	return (
-		<AppLayout focusMode>
+		<AppLayout>
 			<PageContent>
 				<context.Provider value={contextValue}>
 					<Columns>

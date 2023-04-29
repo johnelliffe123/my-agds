@@ -199,7 +199,7 @@ export const FormRegisterPetPersonalDetails = () => {
 	};
 
 	return (
-		<AppLayout focusMode>
+		<AppLayout>
 			<PageContent>
 				<context.Provider value={contextValue}>
 					<Columns>

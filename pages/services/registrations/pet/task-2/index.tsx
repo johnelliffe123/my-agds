@@ -15,7 +15,7 @@ export default function FormRegisterPetTask2HomePage() {
 	return (
 		<>
 			<DocumentTitle title="Your pet's details | Register a pet" />
-			<AppLayout focusMode>
+			<AppLayout>
 				<PageContent>
 					<Columns>
 						<Column columnSpan={{ xs: 12, md: 8 }}>

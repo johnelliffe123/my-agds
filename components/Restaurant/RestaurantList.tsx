@@ -19,9 +19,7 @@ export const RestaurantList = ({
 	const [loading, setLoading] = useState<boolean>(false);
 	const [restaurantList, setRestaurantList] = useState<IRestaurant[]>([]);
 
-	function toDefinedString(
-		arg0: string | string[] | undefined
-	): string {
+	function toDefinedString(arg0: string | string[] | undefined): string {
 		return Array.isArray(arg0) ? arg0[0] : arg0 ? arg0 : '';
 	}
 	// useSWR
@@ -31,19 +29,18 @@ export const RestaurantList = ({
 			setRestaurantList([]);
 			return;
 		}
-			setLoading(true);
-			fetch(
-				'/api/consumer/restaurant?cuisine=' +
-					toDefinedString(cuisine) +
-					'&location=' +
-					toDefinedString(location)
-			)
-				.then((res) => res.json())
-				.then((data) => {
-					setRestaurantList(data);
-					setLoading(false);
-				});
-		
+		setLoading(true);
+		fetch(
+			'/api/consumer/restaurant?cuisine=' +
+				toDefinedString(cuisine) +
+				'&location=' +
+				toDefinedString(location)
+		)
+			.then((res) => res.json())
+			.then((data) => {
+				setRestaurantList(data);
+				setLoading(false);
+			});
 	}, [cuisine, location]);
 
 	return (

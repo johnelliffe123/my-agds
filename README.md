@@ -1,12 +1,9 @@
 # my-agds
+
 A next.js web site based on the Agriculture Design System
 
 Starting point:
 git clone https://github.com/steelthreads/agds-starter-kit.git my-agds
-
-
-
-
 
 # AG Design System Starter Kit
 
