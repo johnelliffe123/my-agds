@@ -12,6 +12,7 @@ export default function ConsumerRestaurantHomePage({
 	cuisines,
 	locations,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+	
 	const [cuisineList, setCuisineList] = useState<Options>(cuisines);
 	const [selectedCuisine, setSelectedCuisine] = useState<string>();
 	const [locationList, setLocationList] = useState<Options>(locations);

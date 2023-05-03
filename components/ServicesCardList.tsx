@@ -24,7 +24,7 @@ const items = [
 	},
 	{
 		title: 'Housing',
-		slug: '/not-found',
+		slug: '/services/propertyMgt/properties',
 		description:
 			'Find help with housing and how to apply for rental assistance.',
 	},
